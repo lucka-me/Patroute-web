@@ -3,6 +3,15 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.3] - 2018-06-09
+### Finished
+- A save button
+
+### Changed
+- Interface improved
+```
+
+```markdown
 ## [0.1.2] - 2018-06-09
 ### Fixed
 - A issue that will detele wrong card after deleting one

@@ -16,8 +16,10 @@
         />
     </head>
     <body>
-        <div class="header bg-primary">
+        <div class="header">
             <h1 class="bg-primary textwhite">巡线任务制作工具 | Mission Authoring Tool</h1>
+            <div class="split"></div>
+            <button class="save" type="button" onclick="generateMission()"><i class="fas fa-save"></i></button>
         </div>
         <div class="main-box">
             <div class="map-block">
@@ -49,6 +51,7 @@
                                     <div class="card-frame">
                                         <button type="button" id="waypointIndex"></button>
                                         <input class="console-row" type="text" value="标题"></input>
+                                        <div class="split"></div>
                                         <button type="button" id="removeButton" onclick=""><i class="fas fa-times"></i></button>
                                         <textarea rows="3">描述</textarea>
                                     </div>
@@ -61,7 +64,7 @@
         </div>
         <div class="footer">
             <div class="footer-row">
-                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="Changelog" >0.1.2</a>
+                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="Changelog" >0.1.3</a>
                 <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/tree/master/Mission%20Authoring%20Tool" title="GitHub">
                     <i class="fab fa-github fa-lg"></i>
                 </a>

@@ -49,12 +49,37 @@ button,.button {
 button:hover,.button:hover {
     color: #FFF;
     background: #003E87;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .header {
-
+    display: flex;
+    background: #0068B7;
     padding: 16px;
+}
+
+.split {
+    flex: auto;
+    min-width: 0px;
+}
+
+button.save {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFF;
+    background: #0068B7;
+    white-space: nowrap;
+    flex: none;
+    margin: 0;
+    padding: 0 auto 0 auto;
+    border: 0px solid #0068B7;
+    border-radius: 0px;
+    outline: none;
+}
+
+button.save:hover {
+    color: #FFF;
+    background: #003E87;
 }
 
 .main-box {
@@ -165,7 +190,7 @@ textarea {
 .card-frame {
     margin: 2px 4px 2px 4px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 

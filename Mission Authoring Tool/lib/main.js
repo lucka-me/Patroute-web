@@ -65,3 +65,10 @@ function clearWaypoints() {
         removeAt(0);
     }
 }
+
+function generateMission() {
+    if (waypointList.length == 0) {
+        alert("没有添加检查点。");
+        return;
+    }
+}
