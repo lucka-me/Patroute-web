@@ -66,15 +66,18 @@ button:hover,.button:hover {
     width: 100%;
 }
 
+.block-frame {
+    margin: 32px;
+}
+
 .map-block {
     display: flex;
     display: -moz-box;
     display: -ms-flexbox;
     flex-direction: column;
     flex: 2;
-    min-width: 450px;
+    min-width: 400px;
     height: 100%;
-    padding: 32px;
 }
 
 .map-view {
@@ -88,8 +91,7 @@ button:hover,.button:hover {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 400px;
-    padding: 32px;
+    min-width: 200px;
 }
 
 .console-head {
@@ -144,6 +146,7 @@ textarea {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
     overflow-y: scroll;
     border-top: 2px solid #003E87;
     border-bottom: 2px solid #003E87;
@@ -153,14 +156,17 @@ textarea {
 }
 
 .waypoint-card {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     border: 1px solid #003E87;
     border-radius: 3px;
     width: 100%;
     margin: 4px 0px 4px 0px;
-    padding: 2px 4px 2px 4px;
+}
+
+.card-frame {
+    margin: 2px 4px 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer {
