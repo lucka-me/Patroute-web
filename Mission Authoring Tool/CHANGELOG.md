@@ -3,6 +3,14 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.0.0] - 2018-06-09
+- First version with all basic function
+
+### Finished
+- Generate and save zip file that includs JSON and GPX file
+```
+
+```markdown
 ## [0.1.4] - 2018-06-09
 ### Finished
 - Generate and save GPX file

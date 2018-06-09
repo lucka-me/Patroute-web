@@ -72,23 +72,37 @@ function generateMission() {
         return;
     }
 
+    var missionID = document.getElementById("missionIDInput").value;
+    var userID = document.getElementById("userIDInput").value;
+    var missionDesc = document.getElementById("missionDesc").value;
+    missionDesc = missionDesc.replace(/\r?\n/g, "\\n");
+    // JSON file
+    var jsonText = "{\n\t\"id\": \"" + missionID + "\",\n\t\"description\": \"" + missionDesc + "\"\n}";
+
     // GPX file
     var gpxText = [];
     gpxText.push("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<gpx version=\"1.1\" creator=\"Mission Authoring Tool for Patroute\">\n");
-    var missionID = document.getElementById("missionIDInput").value;
     var date = new Date();
     gpxText.push("\t<metadata>\n\t\t<name>" + String(missionID) + "</name>\n\t\t<time>" + date.toISOString()+ "</time>\n\t</metadata>\n")
     for (var i = 0; i < waypointList.length; i++) {
         var card = document.getElementById("waypointCard" + String(i));
         var title = card.querySelector("input").value;
         var desc = card.querySelector("textarea").value;
+        desc = desc.replace(/\r?\n/g, "<br/>");
         gpxText.push("\t<wpt lat=\"" + waypointList[i].getLat() + "\" lon=\"" + waypointList[i].getLng() + "\">\n\t\t<name>" + title + "</name>\n\t\t<desc>" + desc + "</desc>\n\t</wpt>\n");
     }
     gpxText.push("</gpx>");
 
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(gpxText.join("")));
-    element.setAttribute('download', String(missionID) + ".gpx");
-    element.style.display = 'none';
-    element.click();
+    var zip = new JSZip();
+    zip.file(userID + ".json", jsonText);
+    var gpxFolder = zip.folder("GPX");
+    gpxFolder.file(String(missionID) + ".gpx", gpxText.join(""));
+
+    zip.generateAsync({type:"blob"}).then(function(content) {
+        var element = document.createElement("a");
+        element.href = window.URL.createObjectURL(content)
+        element.download = "Mission.zip";;
+        element.style.display = "none";
+        element.click();
+    });
 }

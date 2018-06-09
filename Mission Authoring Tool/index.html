@@ -36,7 +36,7 @@
                             巡线员 <input type="text" id="userIDInput" value="U"></input>
                         </div>
                         <div class="console-row">
-                            <textarea rows="3">任务描述</textarea>
+                            <textarea rows="3" id="missionDesc">任务描述</textarea>
                         </div>
                     </div>
                     <h2 class="console-head">检查点列表</h2>
@@ -64,7 +64,7 @@
         </div>
         <div class="footer">
             <div class="footer-row">
-                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="Changelog" >0.1.4</a>
+                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="Changelog" >1.0.0</a>
                 <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/tree/master/Mission%20Authoring%20Tool" title="GitHub">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
@@ -73,6 +73,7 @@
         </div>
     </body>
     <!-- JavaScript -->
+    <script src="./lib/jszip.js"></script>
     <script src="./lib/main.js"></script>
     <script async defer
         src="https://webapi.amap.com/maps?v=1.4.6&key=e8a947a493707e66d00063835f646089&callback=initMap">
