@@ -34,7 +34,7 @@ function createWaypoint(lnglat) {
     markerList.push(newMarker);
     map.add(newMarker);
 
-    waypointList.push({lnglat});
+    waypointList.push(lnglat);
 
     var newCard = document.querySelector("#template-card");
     newCard.content.querySelector(".waypoint-card").setAttribute("id", "waypointCard" + String(waypointList.length - 1));
@@ -71,4 +71,24 @@ function generateMission() {
         alert("没有添加检查点。");
         return;
     }
+
+    // GPX file
+    var gpxText = [];
+    gpxText.push("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<gpx version=\"1.1\" creator=\"Mission Authoring Tool for Patroute\">\n");
+    var missionID = document.getElementById("missionIDInput").value;
+    var date = new Date();
+    gpxText.push("\t<metadata>\n\t\t<name>" + String(missionID) + "</name>\n\t\t<time>" + date.toISOString()+ "</time>\n\t</metadata>\n")
+    for (var i = 0; i < waypointList.length; i++) {
+        var card = document.getElementById("waypointCard" + String(i));
+        var title = card.querySelector("input").value;
+        var desc = card.querySelector("textarea").value;
+        gpxText.push("\t<wpt lat=\"" + waypointList[i].getLat() + "\" lon=\"" + waypointList[i].getLng() + "\">\n\t\t<name>" + title + "</name>\n\t\t<desc>" + desc + "</desc>\n\t</wpt>\n");
+    }
+    gpxText.push("</gpx>");
+
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(gpxText.join("")));
+    element.setAttribute('download', String(missionID) + ".gpx");
+    element.style.display = 'none';
+    element.click();
 }

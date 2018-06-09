@@ -3,6 +3,12 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.4] - 2018-06-09
+### Finished
+- Generate and save GPX file
+```
+
+```markdown
 ## [0.1.3] - 2018-06-09
 ### Finished
 - A save button

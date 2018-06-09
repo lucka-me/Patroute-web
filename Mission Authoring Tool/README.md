@@ -3,11 +3,11 @@
 <h1 align=center>任务制作工具</h1>
 
 <p align="center">
-    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-0.1.3-red.svg"/></a>
+    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-0.1.4-orange.svg"/></a>
 </p>
 
 ## 概述
-任务制作工具，目前处在原型和界面设计阶段，暂时没有实际功能。
+任务制作工具，目前处在制作阶段，暂时只有部分功能。
 
 ## 许可证
 ```
