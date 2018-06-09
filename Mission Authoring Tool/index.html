@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <title>任务制作工具</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Stylesheet -->
+        <link type="text/css" rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Monda"
+        />
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+            integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="header bg-primary">
+            <h1 class="bg-primary textwhite">巡线任务制作工具 | Mission Authoring Tool</h1>
+        </div>
+        <div class="main-box">
+            <div class="map-block">
+                <div class="map-view" id="map"></div>
+            </div>
+            <div class="console-block">
+                <h2 class="console-head">任务信息</h2>
+                <div class="console-body">
+                    <div class="console-row">
+                        任务编号 <input type="text" id="missionIDInput" value="M"></input>
+                        巡线员 <input type="text" id="userIDInput" value="U"></input>
+                    </div>
+                    <div class="console-row">
+                        <textarea rows="3">任务描述</textarea>
+                    </div>
+                </div>
+                <h2 class="console-head">检查点列表</h2>
+                <div class="console-body">
+                    <div class="console-row">
+                        <div id="waypointCount"></div>
+                        <button type="button" onclick="clearWaypoints()">清空</button>
+                    </div>
+                    <div class="console-row console-waypoint-list" id="waypointList">
+                        <div class="waypoint-card">
+                            <input class="console-row" type="text" value="标题"></input>
+                            <button type="button" onclick="removeAt(0)"><i class="fas fa-times"></i></button>
+                            <textarea rows="3">描述</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-row">
+                <div class="footer-item">0.1.0</div>
+                <a class="footer-item" href="https://github.com/lucka-me/PatroLine" title="GitHub">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a class="footer-item" href="https://lucka.moe" title="Blog" >Team 0.1</a>
+            </div>
+        </div>
+    </body>
+    <!-- JavaScript -->
+    <script src="./lib/main.js"></script>
+    <script async defer
+        src="https://webapi.amap.com/maps?v=1.4.6&key=e8a947a493707e66d00063835f646089&callback=initMap">
+    </script>
+</html>
