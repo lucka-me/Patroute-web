@@ -1,4 +1,4 @@
-<div align=center><a href="../"><img src="../Resource/banner.svg" alt="Banner"></a></div>
+<div align=center><a href="https://github.com/lucka-me/Patroute-web"><img src="../Resource/Banner.svg" alt="Banner"></a></div>
 
 <h1 align=center>任务制作工具</h1>
 
