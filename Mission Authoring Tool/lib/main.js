@@ -56,6 +56,7 @@ function removeAt(index) {
         var card = document.getElementById("waypointCard" + String(i));
         card.setAttribute("id", "waypointCard" + String(i - 1));
         card.querySelector("#waypointIndex").innerHTML = String(i);
+        card.querySelector("#removeButton").setAttribute("onclick", "removeAt(" + String(i - 1) + ")");
     }
 }
 
