@@ -1,0 +1,219 @@
+/* Color list*/
+.bg-primary { background-color: #0068B7; }
+.bgl-primary { background-color: #5695EA; }
+.bgd-primary { background-color: #003E87; }
+.bg-accent { background-color: #E60012; }
+.bgl-accent { background-color: #FF553E; }
+.bgd-accent { background-color: #AB0000; }
+.textwhite { color: #FFF; }
+.t-primary { color: #0068B7; }
+.tl-primary { color: #5695EA; }
+.td-primary { color: #003E87; }
+.t-accent { color: #E60012; }
+.tl-accent { color: #FF553E; }
+.td-accent { color: #AB0000; }
+
+body {
+    font-family: 'Monda', sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 0;
+}
+
+h1 {
+    font-family: 'Monda', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+
+h2 {
+    font-family: 'Monda', sans-serif;
+    font-size: 16px;
+}
+
+button,.button {
+    font-family: 'Monda', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    color: #003E87;
+    white-space: nowrap;
+    flex: none;
+    margin: 6px;
+    padding: 0 6px;
+    background: #FFF;
+    border: 2px solid #003E87;
+    border-radius: 2px;
+    outline: none;
+}
+
+button:hover,.button:hover {
+    color: #FFF;
+    background: #003E87;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    background: #0068B7;
+    padding: 16px;
+}
+
+.split {
+    flex: auto;
+    min-width: 0px;
+}
+
+button.save {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFF;
+    background: #0068B7;
+    white-space: nowrap;
+    flex: none;
+    margin: 0;
+    padding: 0 auto 0 auto;
+    border: 0px solid #0068B7;
+    border-radius: 0px;
+    outline: none;
+}
+
+button.save:hover {
+    color: #FFF;
+    background: #003E87;
+}
+
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.block-frame {
+    margin: 32px;
+}
+
+.map-block {
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    flex-direction: column;
+    flex: 2;
+    min-width: 400px;
+    height: 100%;
+}
+
+.map-view {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    margin: 0;
+}
+
+.console-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.console-head {
+    font-weight: bold;
+    white-space: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 4px 0 4px 0;
+}
+
+.console-body {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.console-row,.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    white-space: nowrap;
+    margin: 6px;
+}
+
+input {
+    font-family: 'Monda', monospace;
+    font-size: 14px;
+    color: #003E87;
+    border: none;
+    border-bottom: 2px solid #003E87;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    min-width: 0px;
+    margin: 4px;
+}
+
+textarea {
+    font-family: 'Monda', monospace;
+    font-size: 14px;
+    color: #003E87;
+    border: 2px solid #003E87;
+    border-radius: 0;
+    width: 100%;
+    margin: 4px;
+}
+
+.console-waypoint-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
+    border-top: 2px solid #003E87;
+    border-bottom: 2px solid #003E87;
+    height: 380px;
+    max-height: 380px;
+    padding: 0 16px 0 16px;
+}
+
+.waypoint-card {
+    border: 1px solid #003E87;
+    border-radius: 3px;
+    width: 100%;
+    margin: 4px 0px 4px 0px;
+}
+
+.card-frame {
+    margin: 2px 4px 2px 4px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-item {
+    white-space: nowrap;
+    flex: none;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+}
+
+a.footer-item:hover {
+    color: #003E87;
+}
