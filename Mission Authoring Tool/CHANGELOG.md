@@ -3,6 +3,12 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.0.2] - 2018-06-10
+### Changed
+- Link to the website of Team 0.1
+```
+
+```markdown
 ## [1.0.1] - 2018-06-09
 ### Changed
 - Use RawGit to get 3rd-party script from GitHub

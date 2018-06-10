@@ -3,7 +3,7 @@
 <h1 align=center>任务制作工具</h1>
 
 <p align="center">
-    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-1.0.1-green.svg"/></a>
+    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-1.0.2-green.svg"/></a>
 </p>
 
 ## 概述
