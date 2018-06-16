@@ -3,6 +3,12 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.1.1] - 2018-06-16
+### Fixed
+- CSS issues
+```
+
+```markdown
 ## [1.1.0] - 2018-06-16
 ### Changed
 - A common stylesheet
