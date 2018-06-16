@@ -37,7 +37,7 @@ function createWaypoint(lnglat) {
     waypointList.push(lnglat);
 
     var newCard = document.querySelector("#template-card");
-    newCard.content.querySelector(".waypoint-card").setAttribute("id", "waypointCard" + String(waypointList.length - 1));
+    newCard.content.querySelector(".card").setAttribute("id", "waypointCard" + String(waypointList.length - 1));
     newCard.content.querySelector("#waypointIndex").innerHTML = String(waypointList.length);
     newCard.content.querySelector("#removeButton").setAttribute("onclick", "removeAt(" + String(waypointList.length - 1) + ")");
     document.getElementById("waypointList").appendChild(newCard.content.cloneNode(true));
