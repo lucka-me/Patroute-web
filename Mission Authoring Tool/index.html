@@ -5,7 +5,7 @@
         <title>任务制作工具</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Stylesheet -->
-        <link type="text/css" rel="stylesheet" href="./css/style.css" />
+        <link type="text/css" rel="stylesheet" href="../css/common.css" />
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Monda"
         />
@@ -16,44 +16,48 @@
         />
     </head>
     <body>
-        <div class="header">
-            <h1 class="bg-primary textwhite">巡线任务制作工具 | Mission Authoring Tool</h1>
+        <div class="flex-box bg-primary">
+            <div class="flex-box frame-16">
+                <h1 class="textwhite">巡线任务制作工具 | Mission Authoring Tool</h1>
+            </div>
             <div class="split"></div>
-            <button class="save" type="button" onclick="generateMission()"><i class="fas fa-save"></i></button>
+            <button class="header-button bg-primary bgd-primary-ho textwhite" type="button" onclick="generateMission()">
+                <i class="frame-16 fas fa-save fa-lg"></i>
+            </button>
         </div>
         <div class="main-box">
-            <div class="map-block">
-                <div class="block-frame">
-                    <div class="map-view" id="map"></div>
+            <div class="flex-2 min-w-400">
+                <div class="frame-32">
+                    <div class="map bw-2 bd-primary" id="map"></div>
                 </div>
             </div>
-            <div class="console-block">
-                <div class="block-frame">
-                    <h2 class="console-head">任务信息</h2>
-                    <div class="console-body">
-                        <div class="console-row">
+            <div class="flex-1 min-w-200">
+                <div class="flex-box flex-dir-col frame-32">
+                    <h2>任务信息</h2>
+                    <div class="flex-box flex-dir-col margin-left-8">
+                        <div class="flex-box text-nowarp align-baseline">
                             任务编号 <input type="text" id="missionIDInput" value="M"></input>
                             巡线员 <input type="text" id="userIDInput" value="U"></input>
                         </div>
-                        <div class="console-row">
-                            <textarea rows="3" id="missionDesc">任务描述</textarea>
+                        <div class="flex-box text-nowarp">
+                            <textarea class="fullwidth" rows="3" id="missionDesc">任务描述</textarea>
                         </div>
                     </div>
-                    <h2 class="console-head">检查点列表</h2>
-                    <div class="console-body">
-                        <div class="console-row">
+                    <h2>检查点列表</h2>
+                    <div class="flex-box flex-dir-col margin-left-8">
+                        <div class="flex-box text-nowarp">
                             <div id="waypointCount"></div>
                             <button type="button" onclick="clearWaypoints()">清空</button>
                         </div>
-                        <div class="console-row console-waypoint-list" id="waypointList">
+                        <div class="card-list max-h-360" id="waypointList">
                             <template id="template-card">
-                                <div class="waypoint-card">
+                                <div class="card">
                                     <div class="card-frame">
                                         <button type="button" id="waypointIndex"></button>
-                                        <input class="console-row" type="text" value="标题"></input>
+                                        <input class="text-nowarp" type="text" value="标题"></input>
                                         <div class="split"></div>
                                         <button type="button" id="removeButton" onclick=""><i class="fas fa-times"></i></button>
-                                        <textarea rows="3">描述</textarea>
+                                        <textarea class="fullwidth" rows="3">描述</textarea>
                                     </div>
                                 </div>
                             </template>
@@ -63,8 +67,8 @@
             </div>
         </div>
         <div class="footer">
-            <div class="footer-row">
-                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="更新日志" >1.0.2</a>
+            <div class="flex-box text-nowarp align-baseline">
+                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Authoring%20Tool/CHANGELOG.md" title="更新日志" >1.1.0</a>
                 <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/tree/master/Mission%20Authoring%20Tool" title="GitHub">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
