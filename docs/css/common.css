@@ -204,6 +204,7 @@ button:hover,.button:hover {
 
 /* Editor */
 input {
+    color: #0068B7;
     font-size: 14px;
     border: none;
     border-bottom: 2px solid #003E87;
@@ -215,6 +216,7 @@ input {
 }
 
 textarea {
+    color: #0068B7;
     font-size: 14px;
     border: 2px solid #003E87;
     border-radius: 0;
@@ -252,25 +254,4 @@ div.split {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 2px 4px 2px 4px;
-}
-
-.big-button {
-    font-size: 48px;
-    text-decoration: none;
-    color: #003E87;
-    background: none;
-    border: 2px solid #0068B7;
-    white-space: nowrap;
-    flex: none;
-    margin: 12px;
-    padding: 0;
-    outline: none;
-}
-
-.big-button:hover {
-    color: #FFF;
-    background: #0068B7;
-    border: 2px solid #FFF;
-    border-radius: 0px;
-    cursor: pointer;
 }
