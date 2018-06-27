@@ -1,0 +1,5 @@
+# System files
+.DS_Store
+
+# Duplicate common.css files for development
+Mission\ Review\ Tool/common.css
