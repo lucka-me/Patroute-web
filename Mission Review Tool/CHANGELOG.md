@@ -3,6 +3,15 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.2] - 2018-07-04
+### Finished
+- Read the log file and display the cards
+
+### Changed
+- Log format: Lat Lng -> Lng Lat
+```
+
+```markdown
 ## [0.1.1] - 2018-07-04
 ### Finished
 - Specify the format of log files
