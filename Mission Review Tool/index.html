@@ -39,24 +39,81 @@
                             任务编号 <input type="text" id="missionIDInput" value="M" disabled></input>
                             巡线员 <input type="text" id="userIDInput" value="U" disabled></input>
                         </div>
-                        <div class="flex-box text-nowarp">
-                            <textarea class="fullwidth" rows="3" id="missionDesc" disabled>任务描述</textarea>
-                        </div>
                     </div>
-                    <h2>日志列表</h2>
+                    <h2>日志内容</h2>
                     <div class="flex-box flex-dir-col margin-left-8">
-                        <div class="card-list max-h-360" id="waypointList">
-                            <template id="template-card">
+                        <div class="card-list max-h-360" id="logList">
+
+                            <template id="template-card-title">
                                 <div class="card">
                                     <div class="card-frame">
-                                        <button type="button" id="waypointIndex"></button>
-                                        <input class="text-nowarp" type="text" value="标题"></input>
-                                        <div class="split"></div>
-                                        <button type="button" id="removeButton" onclick=""><i class="fas fa-times"></i></button>
-                                        <textarea class="fullwidth" rows="3">描述</textarea>
+                                        <div class="width-18 at-c" id="logIcon"></div>
+                                        <div id="logTitle"></div>
                                     </div>
                                 </div>
                             </template>
+
+                            <template id="template-card-desc">
+                                <div class="card">
+                                    <div class="card-frame">
+                                        <div class="width-18 at-c" id="logIcon"></div>
+                                        <div id="logTitle"></div>
+                                        <div class="margin-left-18">
+                                            <div class="fullwidth" id="logDesc"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-info-circle"></i></div>
+                                    <div id="logTitle">客户端版本 1.2.2 (201807001)</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-arrow-alt-circle-up"></i></div>
+                                    <div id="logTitle">[2018-07-04T02:57Z] 108.939784, 34.343138</div>
+                                    <div class="margin-left-18">
+                                        <div class="fullwidth" id="logDesc">任务开始</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div id="logTitle">[2018-07-04T02:57Z] 108.939784, 34.343138</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-check-square"></i></div>
+                                    <div id="logTitle">[2018-07-04T02:57Z] 108.939784, 34.343138</div>
+                                    <div class="margin-left-18">
+                                        <div class="fullwidth" id="logDesc">检查完成：检查点名称</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-bug"></i></div>
+                                    <div id="logTitle">[2018-07-04T02:57Z] 108.939784, 34.343138</div>
+                                    <div class="margin-left-18">
+                                        <div class="fullwidth" id="logDesc">报告：报告编号<br/>报告内容</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-frame">
+                                    <div class="width-18 at-c" id="logIcon"><i class="fas fa-exclamation-triangle"></i></div>
+                                    <div id="logTitle">[2018-07-04T02:57Z] 108.939784, 34.343138</div>
+                                    <div class="margin-left-18">
+                                        <div class="fullwidth" id="logDesc">警告</div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -64,7 +121,7 @@
         </div>
         <div class="footer">
             <div class="flex-box text-nowarp a-baseline">
-                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Review%20Tool/CHANGELOG.md" title="更新日志" >0.1</a>
+                <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/blob/master/Mission%20Review%20Tool/CHANGELOG.md" title="更新日志" >0.1.1</a>
                 <a class="footer-item" href="https://github.com/lucka-me/Patroute-web/tree/master/Mission%20Review%20Tool" title="GitHub">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
