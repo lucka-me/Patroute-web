@@ -6,6 +6,7 @@
 var map;
 var locationList = [];
 var markerList = [];
+var routePolyline;
 
 function initMap() {
     map = new AMap.Map(document.getElementById("map"), {
@@ -39,11 +40,8 @@ function loadLog(event) {
     }
     var fileReader = new FileReader();
     fileReader.onload = function() {
-        for (var i = 0; i < markerList.length; i++) {
-            map.remove(markerList[index]);
-        }
-        markerList.splice(0, markerList.length);
-        locationList.splice(0, locationList.length);
+        clearAll();
+
         var lineList = fileReader.result.split("\n");
         for (var i = 0; i < lineList.length; i++) {
             if (lineList[i].startsWith("VER")) {
@@ -65,14 +63,14 @@ function loadLog(event) {
                 newCard.content.querySelector("#logTitle").innerHTML = String("[" + line[1] + "] " + line[2] + ", " + line[3]);
                 newCard.content.querySelector("#logDesc").innerHTML = String(line[4]);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push({lat: parseFloat(line[3]), lng: parseFloat(line[2])});
+                locationList.push(new AMap.LngLat(line[2], line[3]));
             } else if (lineList[i].startsWith("LOC")) {
                 var line = lineList[i].split(" ");
                 var newCard = document.querySelector("#template-card-title");
                 newCard.content.querySelector("#logIcon").innerHTML = String("<i class=\"fas fa-map-marker-alt\"></i>");
                 newCard.content.querySelector("#logTitle").innerHTML = String("[" + line[1] + "] " + line[2] + ", " + line[3]);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push({lat: parseFloat(line[3]), lng: parseFloat(line[2])});
+                locationList.push(new AMap.LngLat(line[2], line[3]));
             } else if (lineList[i].startsWith("CHK")) {
                 var line = lineList[i].split(" ");
                 var newCard = document.querySelector("#template-card-desc");
@@ -80,7 +78,7 @@ function loadLog(event) {
                 newCard.content.querySelector("#logTitle").innerHTML = String("[" + line[1] + "] " + line[2] + ", " + line[3]);
                 newCard.content.querySelector("#logDesc").innerHTML = String("检查完成：" + line[4]);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push({lat: parseFloat(line[3]), lng: parseFloat(line[2])});
+                locationList.push(new AMap.LngLat(line[2], line[3]));
             } else if (lineList[i].startsWith("REP")) {
                 var line = lineList[i].split(" ");
                 var newCard = document.querySelector("#template-card-desc");
@@ -97,7 +95,7 @@ function loadLog(event) {
                 }
                 newCard.content.querySelector("#logDesc").innerHTML = String(line[4] + "<br/>" + reportDesc);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push({lat: parseFloat(line[3]), lng: parseFloat(line[2])});
+                locationList.push(new AMap.LngLat(line[2], line[3]));
             } else if (lineList[i].startsWith("WRN")) {
                 var line = lineList[i].split(" ");
                 var newCard = document.querySelector("#template-card-desc");
@@ -114,10 +112,26 @@ function loadLog(event) {
                 }
                 newCard.content.querySelector("#logDesc").innerHTML = String(warningDesc);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push({lat: parseFloat(line[3]), lng: parseFloat(line[2])});
+                locationList.push(new AMap.LngLat(line[2], line[3]));
             }
 
         }
+
+        routePolyline = new AMap.Polyline({
+            path: locationList,
+            strokeColor: "#0068B7"
+        });
+        map.add(routePolyline);
+        map.setBounds(routePolyline.getBounds());
     };
     fileReader.readAsText(file);
+}
+
+function clearAll() {
+    map.clearMap();
+    markerList.splice(0, markerList.length);
+    locationList.splice(0, locationList.length);
+    document.getElementById("missionIDInput").value = "M";
+    document.getElementById("userIDInput").value = "U";
+    document.getElementById("logList").innerHTML = "";
 }

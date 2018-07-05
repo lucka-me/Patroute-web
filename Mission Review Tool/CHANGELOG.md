@@ -3,6 +3,13 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.3] - 2018-07-05
+### Finished
+- Draw the polyline on map
+- Clear the log list
+```
+
+```markdown
 ## [0.1.2] - 2018-07-04
 ### Finished
 - Read the log file and display the cards

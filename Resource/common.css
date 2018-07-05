@@ -97,6 +97,7 @@
 .min-w-400 { min-width:  400px !important; }
 .min-h-600, .map { min-height: 600px !important; }
 .max-h-360 { max-height: 360px !important; }
+.max-h-450 { max-height: 450px !important; }
 .fullwidth, .map { width: 100% !important; }
 
 /*********/
