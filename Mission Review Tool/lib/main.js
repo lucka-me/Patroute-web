@@ -99,7 +99,7 @@ function loadLog(event) {
                 var location = new AMap.LngLat(line[2], line[3]);
                 locationList.push(location);
                 var marker = new AMap.Marker({
-                    content: "<div class=\"square-20 bg-white roundy-c\"><i class=\"t-primary font-20 fas fa-check-circle\"></i></div>",
+                    content: "<span class=\"t-primary fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-check fa-stack-1x fa-inverse\"></i></span>",
                     offset: new AMap.Pixel(-10, -10),
                     position: location,
                 });
@@ -125,7 +125,7 @@ function loadLog(event) {
                 var location = new AMap.LngLat(line[2], line[3]);
                 locationList.push(location);
                 var marker = new AMap.Marker({
-                    content: "<div class=\"square-20 bg-white roundy-c\"><i class=\"t-accent font-20 fas fa-exclamation-circle\"></i></div>",
+                    content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-exclamation fa-stack-1x fa-inverse\"></i></span>",
                     offset: new AMap.Pixel(-10, -10),
                     position: location,
                 });

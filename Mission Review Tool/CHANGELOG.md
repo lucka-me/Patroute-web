@@ -3,6 +3,12 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.5] - 2018-07-05
+### Changed
+- Use stacked icons (provided by Font Awesome) in markers instead of a <div>
+```
+
+```markdown
 ## [0.1.4] - 2018-07-05
 ### Finished
 - Display the marker of CHK and REP
