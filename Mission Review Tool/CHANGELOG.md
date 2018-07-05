@@ -3,6 +3,16 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [0.1.4] - 2018-07-05
+### Finished
+- Display the marker of CHK and REP
+- Support space in waypoint title
+
+### Changed
+- Card UI improved
+```
+
+```markdown
 ## [0.1.3] - 2018-07-05
 ### Finished
 - Draw the polyline on map

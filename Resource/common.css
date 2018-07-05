@@ -55,6 +55,7 @@
 .bw-3 { border-width: 3px !important; border-style: solid; }
 /* Radius */
 .roundy-0 { border-radius: 0px !important; }
+.roundy-c { border-radius: 50% !important; }
 
 /**********/
 /* Shaodw */
@@ -99,6 +100,8 @@
 .max-h-360 { max-height: 360px !important; }
 .max-h-450 { max-height: 450px !important; }
 .fullwidth, .map { width: 100% !important; }
+/* Square */
+.square-20 { width: 20px !important; height: 20px !important; }
 
 /*********/
 /* Frame */
