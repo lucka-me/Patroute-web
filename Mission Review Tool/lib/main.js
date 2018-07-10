@@ -102,6 +102,7 @@ function loadLog(event) {
                     content: "<span class=\"t-primary fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-check fa-stack-1x fa-inverse\"></i></span>",
                     offset: new AMap.Pixel(-10, -10),
                     position: location,
+                    title: waypointTitle,
                 });
                 markerList.push(marker);
 
@@ -128,6 +129,7 @@ function loadLog(event) {
                     content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-exclamation fa-stack-1x fa-inverse\"></i></span>",
                     offset: new AMap.Pixel(-10, -10),
                     position: location,
+                    title: line[4],
                 });
                 markerList.push(marker);
 

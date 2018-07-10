@@ -3,6 +3,14 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.0] - 2018-07-10
+- First version with all basic function
+
+### Finished
+- Display the waypoint title or issue no. when cursor is over the marker
+```
+
+```markdown
 ## [0.1.5] - 2018-07-05
 ### Changed
 - Use stacked icons (provided by Font Awesome) in markers instead of a <div>
