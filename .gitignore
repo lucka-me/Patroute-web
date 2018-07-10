@@ -2,5 +2,4 @@
 .DS_Store
 
 # Duplicate common.css files for development
-Mission\ Authoring\ Tool/common.css
-Mission\ Review\ Tool/common.css
+css/common.css
