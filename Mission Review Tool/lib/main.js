@@ -100,7 +100,7 @@ function loadLog(event) {
                 locationList.push(location);
                 var marker = new AMap.Marker({
                     content: "<span class=\"t-primary fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-check fa-stack-1x fa-inverse\"></i></span>",
-                    offset: new AMap.Pixel(-10, -10),
+                    offset: new AMap.Pixel(-14, -14),
                     position: location,
                     title: waypointTitle,
                 });
@@ -127,7 +127,7 @@ function loadLog(event) {
                 locationList.push(location);
                 var marker = new AMap.Marker({
                     content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-exclamation fa-stack-1x fa-inverse\"></i></span>",
-                    offset: new AMap.Pixel(-10, -10),
+                    offset: new AMap.Pixel(-14, -14),
                     position: location,
                     title: line[4],
                 });

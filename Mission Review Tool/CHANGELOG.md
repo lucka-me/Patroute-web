@@ -3,6 +3,12 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.0.1] - 2018-07-26
+### Fixed
+- Marker offset incorrect
+```
+
+```markdown
 ## [1.0] - 2018-07-10
 - First version with all basic function
 
