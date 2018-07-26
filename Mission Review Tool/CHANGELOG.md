@@ -3,6 +3,13 @@
 <h1 align=center><br/>更新日志</h1>
 
 ```markdown
+## [1.0.2] - 2018-07-26
+### Added
+- Marker for WRN
+- Display information when click the markers
+```
+
+```markdown
 ## [1.0.1] - 2018-07-26
 ### Fixed
 - Marker offset incorrect

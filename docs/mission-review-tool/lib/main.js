@@ -71,7 +71,19 @@ function loadLog(event) {
                 newCard.content.querySelector("#logTitle").innerHTML = String("[" + line[1] + "] " + line[2] + ", " + line[3]);
                 newCard.content.querySelector("#logDesc").innerHTML = String(line[4]);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push(new AMap.LngLat(line[2], line[3]));
+                var location = new AMap.LngLat(line[2], line[3]);
+                locationList.push(location);
+                var marker = new AMap.Marker({
+                    content: "<span class=\"t-primary fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-arrow-up fa-stack-1x fa-inverse\"></i></span>",
+                    offset: new AMap.Pixel(-14, -14),
+                    position: location
+                });
+                marker.on("click", (function(message) {
+                    return function() {
+                        alert(message);
+                    }
+                })(line[1] + "\n" + line[4]));
+                markerList.push(marker);
 
             } else if (lineList[i].startsWith("LOC")) {
 
@@ -104,6 +116,11 @@ function loadLog(event) {
                     position: location,
                     title: waypointTitle,
                 });
+                marker.on("click", (function(message) {
+                    return function() {
+                        alert(message);
+                    }
+                })(line[1] + "\n" + "检查完成：" + waypointTitle));
                 markerList.push(marker);
 
             } else if (lineList[i].startsWith("REP")) {
@@ -126,11 +143,16 @@ function loadLog(event) {
                 var location = new AMap.LngLat(line[2], line[3]);
                 locationList.push(location);
                 var marker = new AMap.Marker({
-                    content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-exclamation fa-stack-1x fa-inverse\"></i></span>",
+                    content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-bug fa-stack-1x fa-inverse\"></i></span>",
                     offset: new AMap.Pixel(-14, -14),
                     position: location,
                     title: line[4],
                 });
+                marker.on("click", (function(message) {
+                    return function() {
+                        alert(message);
+                    }
+                })(line[1] + "\n" + "问题：" +line[4] + "\n" + reportDesc.replace("<br/>", "\n")));
                 markerList.push(marker);
 
             } else if (lineList[i].startsWith("WRN")) {
@@ -150,8 +172,20 @@ function loadLog(event) {
                 }
                 newCard.content.querySelector("#logDesc").innerHTML = String(warningDesc);
                 document.getElementById("logList").appendChild(newCard.content.cloneNode(true));
-                locationList.push(new AMap.LngLat(line[2], line[3]));
-
+                var location = new AMap.LngLat(line[2], line[3]);
+                locationList.push(location);
+                var marker = new AMap.Marker({
+                    content: "<span class=\"t-accent fa-stack\"><i class=\"fas fa-circle fa-stack-2x\"></i><i class=\"fas fa-exclamation fa-stack-1x fa-inverse\"></i></span>",
+                    offset: new AMap.Pixel(-14, -14),
+                    position: location,
+                    title: line[4],
+                });
+                marker.on("click", (function(message) {
+                    return function() {
+                        alert(message);
+                    }
+                })(line[1] + "\n" + warningDesc.replace("<br/>", "\n")));
+                markerList.push(marker);
             }
 
         }
