@@ -6,7 +6,7 @@
 </p>
 
 ## 概述
-本应用体系由此服务器端及[ Android 客户端](https://github.com/lucka-me/Patroute-android)构成。
+本应用体系由此服务器端及[Android 客户端](https://github.com/lucka-me/Patroute-android)构成。
 
 ## 目录
 * [FTP 服务器](./FTP%20Server/)

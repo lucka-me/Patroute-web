@@ -103,6 +103,8 @@ function generateMission() {
         element.href = window.URL.createObjectURL(content)
         element.download = "Mission.zip";;
         element.style.display = "none";
+        document.body.appendChild(element);
         element.click();
+        document.body.removeChild(element);
     });
 }
