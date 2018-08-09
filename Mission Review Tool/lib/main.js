@@ -29,7 +29,10 @@ function openLogFile() {
     element.type = "file";
     element.accpet = ".log";
     element.addEventListener('change', loadLog, false);
+    element.style.display = "none";
+    document.body.appendChild(element);
     element.click();
+    document.body.removeChild(element);
 }
 
 function loadLog(event) {

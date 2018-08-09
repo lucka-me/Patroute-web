@@ -3,7 +3,7 @@
 <h1 align=center>任务审核工具</h1>
 
 <p align="center">
-    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-1.0.2-brightgreen.svg"/></a>
+    <a href="./CHANGELOG.md"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3-brightgreen.svg"/></a>
     <a href=".https://zero-one.space/mission-review-tool/"><img alt="Demo" src="https://img.shields.io/badge/demo-available-brightgreen.svg"/></a>
 </p>
 
